@@ -1,0 +1,56 @@
+SOAL HW
+Buatlah sebuah aplikasi Express JS yang dapat menampilkan data text pada halaman web 
+yang didapatkan dari sampel data ini dan schema di sini sebagai referensi.
+Soal 1: Lakukan seeding untuk menambahkan 5 data baru pada data table actor yang 
+disediakan
+Soal 2 : Buatlah query untuk menampilkan data pada database sebagai berikut.
+1. Menampilkan data seluruh list film
+2. Menampilkan data film tertentu berdasarkan id
+3. Menampilkan data list category
+4. Menampilkan data list film berdasarkan category
+Implementasikan routing yang sesuai dan benar pada aplikasi yang teman-teman buat.
+Soal 3: Lakukan migrasi database dengan menambahkan column age pada tabel actor yang 
+tersedia
+
+// FLOW 
+
+okeh pertama
+kita 
+npm init
+npm install --save express
+npm install nodemon
+npm install --save PG
+npm install -g db-migrate
+npm install -g db-migrate-pg
+db-migrate create add-age --sql-file //ganti age sesuai apa yg mau ditambahin
+
+
+lalu ubah di pckg.json dibagian script {
+    "start": "nodemon index.js"
+}
+
+npm run start buat jalanin
+npm run seed untuk seeding
+
+
+gambaran yg didapat sejauh ini untuk query itu kita make konsep routing
+buat tambahin endpoint klo mau coba di postman/bruno dll
+
+// Testing query klo gamake routing
+// app.get("/", (req, res) => {
+//   pool.query("SELECT * FROM actor LIMIT 50", (err, result) => {
+//     if (err) {
+//       throw err;
+//     }
+//     res.send(result.rows);
+//   });
+// });
+
+"SELECT * FROM film_category WHERE category_id = $1",
+
+CURRENT PROGRESS
+masih ada error pas mau seeding --- aman
+query blm ditambahin lagi yg lainnya 
+
+
+// Pertanyaan buat LiveSession drpd keburu lupa pas LiveSession
